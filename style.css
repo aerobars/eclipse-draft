@@ -1,8 +1,5 @@
 * {
-  border-color: red;
-  border-style: solid;
-  border-width: 1px;
-  
+  border: red solid 1px;
 }
 body {
   display: flex;
@@ -13,14 +10,18 @@ body {
   background-repeat: no-repeat;
   background-color: #000000;
   background-position: center;
-  padding: 293px 0px;
+  padding: 193px 0px;
 
 }
 
 #title {
-
+  color: rgb(0, 170, 255);
+  margin-bottom: 125px;
+  font-size: large;
 }
 
 button {
-  align-items: center;
+  border-radius: 100px;
+  font-size: 50px;
+  padding: 20px;
 }
