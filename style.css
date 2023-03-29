@@ -3,4 +3,16 @@ body {
   background-repeat: no-repeat;
   background-color: #000000;
   background-position: center;
+  justify-content: center;
+  align-items: center;
+  border: 5px;
+}
+
+#title {
+  border-color: red;
+  border: 5px;
+}
+
+button {
+  align-items: center;
 }
