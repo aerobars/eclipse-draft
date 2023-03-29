@@ -6,11 +6,11 @@ function draft() {
   let optionOne = availableRaces[Math.floor(Math.random() * availableRaces.length)];
   do {
     let optionTwo = availableRaces[Math.floor(Math.random() * availableRaces.length)];
-  } while (optionOne == optionTwo);
+  } while (optionOne === optionTwo);
   let choices = [optionOne, optionTwo];
   return choices
 }
-
+console.log(draft);
 //display draft options as two buttons
 
 //updates list of available races after player selects

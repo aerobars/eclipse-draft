@@ -1,6 +1,6 @@
-* {
+/* {
   border: red solid 1px;
-}
+}*/
 body {
   display: flex;
   flex-direction: column;
@@ -16,12 +16,14 @@ body {
 
 #title {
   color: rgb(0, 170, 255);
+  /*color: black;*/
   margin-bottom: 125px;
-  font-size: large;
+  font-size: 50px;
 }
 
 button {
   border-radius: 100px;
-  font-size: 50px;
+  font-size: 40px;
   padding: 20px;
+  background-color: rgba(0, 55, 195, 0.627);
 }
