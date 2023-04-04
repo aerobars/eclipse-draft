@@ -1,16 +1,15 @@
 /* {
   border: red solid 1px;
 }*/
-body {
+#page {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-image: url(images/Draft\ Background.jpg);
-  background-repeat: no-repeat;
-  background-color: #000000;
-  background-position: center;
-  padding: 193px 0px;
+  background-size: cover;
+  padding: 300px;
+  
 
 }
 
