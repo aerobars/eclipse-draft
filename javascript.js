@@ -38,27 +38,29 @@ function draftStart() {
   choiceOne.appendChild(imgOne);
   choiceTwo.appendChild(imgTwo);
 
+  //clickEvent();
   draftRound();
 }
 
-//display draft options as two buttons/divs
+//display draft options as two images
 
 function draftRound() {
   let choices = draftOptions();
 
+  choiceOne.setAttribute("id", choices[0]);
+  choiceTwo.setAttribute("id", choices[1]);
+
   imgOne.src = "images/" + choices[0] + ".webp"; 
   imgTwo.src = "images/" + choices[1] + ".webp"; 
-}
 
-
-document.querySelectorAll('.choice').forEach((element) => {
-  element.addEventListener('click', () => {
-    console.log('test');
-    element.setAttribute('style', 'background-color: red');
-    //raceUpdate(element.textContent);
-    //draftRound();
+  document.querySelectorAll('.choice').forEach((element) => {
+    element.addEventListener('click', () => {
+      raceUpdate(element.id);
+      draftRound();
+    })
   })
-})
+
+}
 
 //shuffles available races and present two as the draft choices
 function draftOptions() {
