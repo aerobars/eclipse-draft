@@ -44,13 +44,12 @@ function draftStart() {
 //display draft options as two buttons/divs
 
 function draftRound() {
-  choiceOne.textContent = "";
-  choiceTwo.textContent = "";
-
   let choices = draftOptions();
-  choiceOne.textContent = choices[0];
-  choiceTwo.textContent = choices[1];
+
+  imgOne.src = "images/" + choices[0] + ".webp"; 
+  imgTwo.src = "images/" + choices[1] + ".webp"; 
 }
+
 
 document.querySelectorAll('.choice').forEach((element) => {
   element.addEventListener('click', () => {
