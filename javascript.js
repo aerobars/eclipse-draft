@@ -11,10 +11,11 @@ let roundCount = 0;
 
 const choiceOne = document.createElement('div');
 choiceOne.classList.add('choice');
-
+choiceOne.setAttribute('style', 'padding: 10px')
 
 const choiceTwo = document.createElement('div');
 choiceTwo.classList.add('choice');
+choiceTwo.setAttribute('style', 'padding: 10px')
 
 const page = document.querySelector('#page');
 const start = document.querySelector('#start');
@@ -27,7 +28,11 @@ function draftStart() {
   page.removeChild(start);
   page.removeChild(title);
 
-  page.setAttribute('style', 'flex-direction: row')
+  page.setAttribute('style', 'flex-direction: row')  
+  
+  page.appendChild(choiceOne);
+  page.appendChild(choiceTwo);
+
   draftRound();
 }
 
@@ -40,16 +45,14 @@ function draftRound() {
   let choices = draftOptions();
   choiceOne.textContent = choices[0];
   choiceTwo.textContent = choices[1];
-
-  page.appendChild(choiceOne);
-  page.appendChild(choiceTwo);
 }
 
 document.querySelectorAll('.choice').forEach((element) => {
   element.addEventListener('click', () => {
+    console.log('test');
     element.setAttribute('style', 'background-color: red');
-    raceUpdate(element.textContent);
-    draftRound();
+    //raceUpdate(element.textContent);
+    //draftRound();
   })
 })
 
