@@ -11,11 +11,13 @@ let roundCount = 0;
 
 const choiceOne = document.createElement('div');
 choiceOne.classList.add('choice');
-choiceOne.setAttribute('style', 'padding: 10px')
+
+const imgOne = document.createElement('img');
 
 const choiceTwo = document.createElement('div');
 choiceTwo.classList.add('choice');
-choiceTwo.setAttribute('style', 'padding: 10px')
+
+const imgTwo = document.createElement('img');
 
 const page = document.querySelector('#page');
 const start = document.querySelector('#start');
@@ -32,6 +34,9 @@ function draftStart() {
   
   page.appendChild(choiceOne);
   page.appendChild(choiceTwo);
+  
+  choiceOne.appendChild(imgOne);
+  choiceTwo.appendChild(imgTwo);
 
   draftRound();
 }
