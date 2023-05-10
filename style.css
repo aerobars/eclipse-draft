@@ -31,6 +31,7 @@ button {
 .choice {
   opacity: 0.6;
   color: black;
+  padding: 10px;
 }
 .choice:hover {
   opacity: 1;
