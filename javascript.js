@@ -38,7 +38,14 @@ function draftStart() {
   choiceOne.appendChild(imgOne);
   choiceTwo.appendChild(imgTwo);
 
-  //clickEvent();
+  document.querySelectorAll('.choice').forEach((element) => {
+    element.addEventListener('click', () => {
+      raceUpdate(element.id);
+      if (availableRaces.length >= 2) {
+        draftRound();
+      }
+    })
+  })
   draftRound();
 }
 
@@ -52,14 +59,6 @@ function draftRound() {
 
   imgOne.src = "images/" + choices[0] + ".webp"; 
   imgTwo.src = "images/" + choices[1] + ".webp"; 
-
-  document.querySelectorAll('.choice').forEach((element) => {
-    element.addEventListener('click', () => {
-      raceUpdate(element.id);
-      draftRound();
-    })
-  })
-
 }
 
 //shuffles available races and present two as the draft choices
@@ -78,7 +77,10 @@ function draftOptions() {
 //updates list of available races after player selects
 function raceUpdate(choice) {
   //remove the chosen race from availableRaces array and return updated array
-  availableRaces.filter(race => !choice.includes(race))
+  let draftResult = availableRaces.filter(race => !choice.includes(race))
+  availableRaces = draftResult;
+  console.log(choice);
+  console.log(availableRaces);
 }
 
 start.addEventListener('click', draftStart);
