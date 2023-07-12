@@ -57,8 +57,8 @@ function draftRound() {
   choiceOne.setAttribute("id", choices[0]);
   choiceTwo.setAttribute("id", choices[1]);
 
-  imgOne.src = "images/" + choices[0] + ".webp"; 
-  imgTwo.src = "images/" + choices[1] + ".webp"; 
+  imgOne.src = `images/${choices[0]}.webp`; 
+  imgTwo.src = `images/${choices[1]}.webp`; 
 }
 
 //shuffles available races and present two as the draft choices
@@ -79,8 +79,8 @@ function raceUpdate(choice) {
   //remove the chosen race from availableRaces array and return updated array
   let draftResult = availableRaces.filter(race => !choice.includes(race))
   availableRaces = draftResult;
-  console.log(choice);
-  console.log(availableRaces);
+  //console.log(choice);
+  //console.log(availableRaces);
 }
 
 start.addEventListener('click', draftStart);
